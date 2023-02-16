@@ -1,5 +1,15 @@
-import logo from './logo.svg';
-import image from './img.jpg';
+import aspen1 from "./Images/2018_aspen1.jpg"
+import ouray1 from "./Images/2018_ouray1.jpg"
+import ouray2 from "./Images/2018_ouray2.jpg"
+import rmnp1 from "./Images/2018_rmnp1.jpg"
+import olymp1 from "./Images/2021_olymp1.jpg"
+import olymp2 from "./Images/2021_olymp2.jpg"
+import rain1 from "./Images/2021_rain1.jpg"
+import rain2 from "./Images/2021_rain2.jpg"
+import rain3 from "./Images/2021_rain3.jpg"
+import rain4 from "./Images/2021_rain4.jpg"
+import capreef1 from "./Images/2022_capreef1.jpg"
+// import washington from '../../../../Dropbox/Photo Stuff/Organized Pictures/2022/07.24.22 - Mt. Washington , Sabbaday Falls/07.24.22 - Mt. Washington , Sabbaday Falls - Sun - [100, 32 mm, 1-15 s].jpg';
 import './App.css';
 
 var i = 0;
@@ -21,14 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
 function App() {
   return (
     <div className="App" onLoad='typeWriter()'>
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div> */}
       <section>
         <div>
           <h1>CHNO.CO</h1>
@@ -36,21 +38,75 @@ function App() {
         </div>
       </section>
       <section>
-
-        <img alt="The narrows in Zion National Park." src={image}/>
-        {/* <h1>SOME PHOTO</h1> */}
+        <div class="img-with-text">
+            <img alt="Cracked Rocks in Capitol Reef National Park." src={capreef1}/>
+            <p>Scroll down further for more images.</p>
+        </div>
       </section>
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+      <section>
+        <div class="grid">
+          <div class="square fullImg container">
+            <img src={aspen1} />
+            <div class="overlay">
+              <div class="text">Aspen, 2018</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={ouray1} />
+            <div class="overlay">
+              <div class="text">Ouray, 2018</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={ouray2} />
+            <div class="overlay">
+              <div class="text">Ouray, 2018</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={rmnp1} />
+            <div class="overlay">
+              <div class="text">Rocky Mountain, 2018</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={olymp1} />
+            <div class="overlay">
+              <div class="text">Olympic, 2021</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={olymp2} />
+            <div class="overlay">
+              <div class="text">Olympic, 2021</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={rain1} />
+            <div class="overlay">
+              <div class="text">Mt. Rainier, 2021</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={rain2} />
+            <div class="overlay">
+              <div class="text">Mt. Rainier, 2021</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={rain3} />
+            <div class="overlay">
+              <div class="text">Mt. Rainier, 2021</div>
+            </div>
+          </div>
+          <div class="square fullImg container">
+            <img src={rain4} />
+            <div class="overlay">
+              <div class="text">Mt. Rainier, 2021</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

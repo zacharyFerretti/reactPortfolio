@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+
+.img-with-text {
+  text-align: center;
+  width: [width of img];
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+}
+
 #root {
   font-family: 'EB Garamond', serif;
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
   margin: 0;
-  /* padding: 2rem; */
   text-align: center;
   height: 100%;
   width: 100%;
@@ -53,4 +61,70 @@ p {
 
 .read-the-docs {
   color: #888;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2%;
+  padding: 15%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #00000040;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-family: 'EB Garamond', serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.square {
+  aspect-ratio: 1/ 1;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.square.fullImg {
+  padding: 0;
+}
+
+.square.fullImg img {
+  object-fit: cover;
 }
